@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         btnThemDulieu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseReference.child("users").child("user1").child("name").setValue("uyen");     // add new node
-                databaseReference.child("users").child("user2").child("name").setValue("chien");    // add new node
+                User user = new User("Pham Dinh Chien", true, "21");
+
+                databaseReference.child("users").child("user3").setValue(user);
             }
         });
     }
